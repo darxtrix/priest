@@ -11,7 +11,7 @@ GLOBAL_SYNONYM_DICT = {
     "afternoon" : ['noon','afternoon'],
     "evening" : ['evening','sunset','teatime','sundown'],
     "sweet" : ['sweet','beautiful'],
-    "night" : ['bedtime','gloom','nighttime']
+    "night" : ['bedtime','gloom','nighttime','night']
 }
 
 DELIMITERS = [':)',':-)',';-)','.','!','!!','','','']
