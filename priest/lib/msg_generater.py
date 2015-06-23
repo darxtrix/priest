@@ -9,7 +9,9 @@ GLOBAL_SYNONYM_DICT = {
     "wish" : ['wish','wishing'],
     "hey" : ['hey','hi','hello','howdy','yo','heya'],
     "afternoon" : ['noon','afternoon'],
-    "evening" : ['evening','sunset','teatime','sundown']
+    "evening" : ['evening','sunset','teatime','sundown'],
+    "sweet" : ['sweet','beautiful'],
+    "night" : ['bedtime','gloom','nighttime']
 }
 
 DELIMITERS = [':)',':-)',';-)','.','!','!!','','','']
