@@ -4,10 +4,12 @@
 import random
 
 GLOBAL_SYNONYM_DICT = {
-    "good" : ['great','marvelous','blissful','positive','superb','nice','wonderful','splendid'],
-    "morning" : ['aurora','forenoon','sunup','sunrise'],
-    "wish" : ['wishing'],
-    "hey" : ['hi','hello','howdy','yo','heya']
+    "good" : ['good','great','marvelous','blissful','positive','superb','nice','wonderful','splendid','cheerful','eventful'],
+    "morning" : ['morning','aurora','forenoon','sunup','sunrise'],
+    "wish" : ['wish','wishing'],
+    "hey" : ['hey','hi','hello','howdy','yo','heya'],
+    "afternoon" : ['noon','afternoon'],
+    "evening" : ['evening','sunset','teatime','sundown']
 }
 
 DELIMITERS = [':)',':-)',';-)','.','!','!!','','','']
