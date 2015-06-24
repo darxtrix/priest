@@ -8,7 +8,7 @@ GLOBAL_SYNONYM_DICT = {
     "morning" : ['morning','aurora','forenoon','sunup','sunrise'],
     "wish" : ['wish','wishing'],
     "hey" : ['hey','hi','hello','howdy','yo','heya'],
-    "afternoon" : ['noon','afternoon'],
+    "afternoon" : ['noon','afternoon','day'],
     "evening" : ['evening','sunset','teatime','sundown'],
     "sweet" : ['sweet','beautiful'],
     "night" : ['bedtime','gloom','nighttime','night']
