@@ -1,14 +1,31 @@
-from distutils.core import setup
+try:
+    from setuptools import setup, find_packages
+except ImportError:
+    from distutils.core import setup, find_packages
+
+from os import path
+
+import priest
+
+here = path.abspath(path.dirname(__file__))
+
 
 setup(
   name = 'priest',
-  packages = ['priest'], 
-  version = '0.2',
+  packages=find_packages(),
+  version = priest.__version__,
+  include_package_data=True,
   description = 'Generate wishes from your command line with full customization.',
   author = 'Ankush Sharma',
   author_email = 'ankprahsar@gmail.com',
   url = 'https://github.com/black-perl/priest', 
-  download_url = 'https://github.com/black-perl/priest/tarball/0.2', 
+  download_url = 'https://github.com/black-perl/priest/tarball/0.5', 
   keywords = ['priest', 'automated-wishes'], 
-  classifiers = []
+  license='MIT',
+  install_requires=[
+  'requests==2.2.1',
+  'pytz==2015.4',
+  'goslate==1.4.0'
+  ]
+  
 )
