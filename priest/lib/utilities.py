@@ -6,7 +6,23 @@ import requests, goslate
 import os, pytz, datetime, time
 from PIL import Image, ImageFont, ImageDraw
 
-def get_coordinates():
+def get_command(t):
+    '''
+        return the command to be used based on the current time
+    '''
+    if t < 43200 and t > 18000:
+        command = 'morning'
+    elif t > 43200 and t < 61200:
+        command = 'afternoon'
+    elif t > 61200 and t < 72000:
+        command = 'evening'
+    else:
+        command = 'night'
+
+    return command
+
+
+def get_timezone():
     '''
         Returns the timezone info
     '''
@@ -71,7 +87,7 @@ def prepare_image(msg,img_path,font):
     font = ImageFont.truetype(font_path,16)
     draw.text((int(width/12.0),int(height*0.75)),
              msg,(255,255,255),font=font)
-    path = os.path.abspath('../data/user_data/{0}.jpg'.format(str( int(time.time()) )))
+    path = os.path.abspath('../user_data/{0}.jpg'.format(str( int(time.time()) )))
     img.save(path)
     return path
 
