@@ -39,4 +39,4 @@ import os
 __dir__ = os.path.abspath(os.path.dirname(__file__))
 __version__ = 0.1
 
-from .lib.core import *
+from priest.lib.core import *
