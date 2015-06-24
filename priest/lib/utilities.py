@@ -3,18 +3,26 @@
 '''
 
 import requests, goslate
-import os
-from PIL import Image, ImageFont, ImageDraw, time
+import os, pytz, datetime, time
+from PIL import Image, ImageFont, ImageDraw
 
 def get_coordinates():
     '''
-        Returns the lattitude & longitude pairs
+        Returns the timezone info
     '''
+    URL = 'http://www.telize.com/geoip'
+    resp = requests.get(URL)
+    return resp.json()['timezone']
 
-def get_time(lattitude,longitude):
+
+def get_time(timezone):
     '''
-        Find the current time at the location pointed out by the lattitude and longitude
+        Return the current time in seconds at the location by using the timezone
     '''
+    tz = pytz.timezone(timezone)
+    curr_time = datetime.datetime.now(tz)
+    (h,m,s) = curr_time.strftime('%H-%M-%S').split('-')
+    return (int(h)*3600 + int(m)*60 + int(s))
 
 
 def get_location():
@@ -57,13 +65,13 @@ def prepare_image(msg,img_path,font):
     '''
     img = Image.open(img_path)
     draw = ImageDraw.Draw(img)
-    font = ImageFont(font,18)
     width,height = img.size
     # writing on the image
-    draw.text((int(height*0.75),int(width/10.0)),
-             'Sample text',(255,255,255),font=font)
-    # wtf is to be done with the image
-    path = os.getabspath('../data/user_data/{0}'.format(str( int(time.time()) )))
+    font_path = os.path.abspath('../data/fonts/{0}'.format(font+'.ttf'))
+    font = ImageFont.truetype(font_path,16)
+    draw.text((int(width/12.0),int(height*0.75)),
+             msg,(255,255,255),font=font)
+    path = os.path.abspath('../data/user_data/{0}.jpg'.format(str( int(time.time()) )))
     img.save(path)
     return path
 
