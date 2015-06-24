@@ -57,6 +57,7 @@ And, this gives you an awesome picture message :wink:
 
 # What is does and how ?
 It generates random wish messages/pictures in your native language and according to time of the day by querying APIs internally for getting the information of your timezone, location etc.
+
 **Note** : If you are using a proxy connection, it might create a mess ! :flushed:
 
 # Usage
