@@ -5,6 +5,7 @@
 import requests, goslate
 import os, pytz, datetime, time
 from PIL import Image, ImageFont, ImageDraw
+import textwrap
 
 def get_command(t):
     '''
@@ -82,11 +83,15 @@ def prepare_image(msg,img_path,font):
     img = Image.open(img_path)
     draw = ImageDraw.Draw(img)
     width,height = img.size
+    lines = textwrap.wrap(text=msg,width=30)
+    text_height = 0
     # writing on the image
     font_path = os.path.abspath('../data/fonts/{0}'.format(font+'.ttf'))
     font = ImageFont.truetype(font_path,16)
-    draw.text((int(width/12.0),int(height*0.75)),
-             msg,(255,255,255),font=font)
+    for line in lines:
+        draw.text((int(width/12.0),int(height*0.70)+text_height),
+                 line,(255,255,255),font=font)
+        text_height += font.getsize(line)[1]
     path = os.path.abspath('../user_data/{0}.jpg'.format(str( int(time.time()) )))
     img.save(path)
     return path
