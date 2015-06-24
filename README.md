@@ -25,7 +25,7 @@ Generate wishes from your command line with full customization.
     #=> heya !! morning !
 ```
         
-**PS : ** You can run this at any time of a day , it will generate wish messages accordingly. :smiley:
+**PS:** You can run this at any time of a day , it will generate wish messages accordingly. :smiley:
 
 # See more
 - If you run it in **France** in night
