@@ -37,6 +37,6 @@ For more : github.com/black-perl/priest
 import os
 
 __dir__ = os.path.abspath(os.path.dirname(__file__))
-__version__ = 0.1
+__version__ = 0.2
 
 from priest.lib.core import *
