@@ -69,12 +69,13 @@ It generates random wish messages/pictures in your native language and according
 `night`-  Outputs a night greeting message   
 
 ##parameters 
-Each method takes in a `lang` parameter for eg. `en`,`de` etc and you can pass in an optional `pic` parameter.
+Each method takes in an optional `lang` parameter for eg. `en`,`de` etc and you can pass in an optional `pic` parameter.
 
 ```bash
 >>> from priest import morning
 >>> morning(lang='de',pic=True)
 ```
+*Result*:
 
 ![](http://i.imgur.com/hv8URIf.jpg)
 
@@ -85,7 +86,7 @@ Each method takes in a `lang` parameter for eg. `en`,`de` etc and you can pass i
 >>> pip install priest
 ```
 
-**Note** : You need to register at [Mashape](https://www.mashape.com) and set your api key as an environment variable. i.e
+**Note** : You need to register at [Mashape](https://www.mashape.com) and set your api key as an environment variable as follow:
 
 ```bash
 >>> export X_Mashape_Key=<api-key>
@@ -93,7 +94,7 @@ Each method takes in a `lang` parameter for eg. `en`,`de` etc and you can pass i
     
 # Some feature storming
 - Rest API coming soon !
-- Use calendar API to generate wishes for festivals.
+- Use calendar API to generate wishes for festivals ?
 
 # Contributions
 Pull requests are awesome and always welcome. Please use the **issue tracker** to report any bugs or file feature requests.
