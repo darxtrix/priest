@@ -5,8 +5,8 @@ Core functions of Priest
 import msg_generator
 import os, random
 from utilities import *
-
-DATA_PATH = os.path.join(os.path.dirname( os.path.abspath( os.path.dirname(__file__) ) ),'data')
+from .. import __dir__
+DATA_PATH = os.path.join(__dir__,'data')
 
 
 def _customiser(command,msg,lang,font,pic):
