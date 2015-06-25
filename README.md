@@ -55,6 +55,31 @@ And, this gives you an awesome picture message :wink:
     
 ![](http://i.imgur.com/pG2FRcr.jpg)
 
+And, the wishes are quite random, running the following 10 times,
+
+```bash
+>>> from priest import morning
+>>> morning(lang='en')
+```
+
+would generate wishes like these :
+
+```python
+
+Hope your day goes great cheerful morning :-)
+Hope your day goes superb splendid sunup !
+yo, sunrise :)
+Wish you a good sunrise 
+hi, morning ;-)
+eventful sunup 
+Wish you a splendid aurora 
+heya, have a marvelous day .
+marvelous sunup !
+morning !
+
+```
+
+
 # What is does and how ?
 It generates random wish messages/pictures in your native language and according to time of the day by querying APIs internally for getting the information of your timezone, location etc.
 
