@@ -124,7 +124,7 @@ Each method takes in an optional `lang` parameter for eg. `en`,`de` etc and you 
 # Contributions
 Pull requests are awesome and always welcome. Please use the **issue tracker** to report any bugs or file feature requests.
 
-#Licence 
+#License 
 MIT
 
 
