@@ -23,7 +23,7 @@ setup(
   keywords = ['priest', 'automated-wishes'], 
   license='MIT',
   install_requires=[
-  'requests==2.2.1',
+  'requests==2.20.0',
   'pytz==2015.4',
   'goslate==1.4.0'
   ]
